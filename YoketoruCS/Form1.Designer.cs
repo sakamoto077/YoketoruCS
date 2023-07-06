@@ -37,8 +37,11 @@
             labelclear = new Label();
             tempPlayer = new Label();
             labelHighScore = new Label();
-            labelCopyright = new Label();
+            tempItem = new Label();
             tempObstacle = new Label();
+            labelCopyright = new Label();
+            labelTimer = new Label();
+            labelScore = new Label();
             SuspendLayout();
             // 
             // timer1
@@ -51,7 +54,8 @@
             // 
             labelTitle.AutoSize = true;
             labelTitle.Font = new Font("Yu Gothic UI", 30F, FontStyle.Regular, GraphicsUnit.Point);
-            labelTitle.Location = new Point(306, 90);
+            labelTitle.ForeColor = Color.Lime;
+            labelTitle.Location = new Point(297, 108);
             labelTitle.Name = "labelTitle";
             labelTitle.Size = new Size(189, 54);
             labelTitle.TabIndex = 0;
@@ -102,31 +106,32 @@
             // 
             tempPlayer.AutoSize = true;
             tempPlayer.Font = new Font("Yu Gothic UI", 15F, FontStyle.Regular, GraphicsUnit.Point);
-            tempPlayer.Location = new Point(93, 188);
+            tempPlayer.Location = new Point(121, 154);
             tempPlayer.Name = "tempPlayer";
-            tempPlayer.Size = new Size(57, 28);
+            tempPlayer.Size = new Size(65, 28);
             tempPlayer.TabIndex = 5;
-            tempPlayer.Text = "( .    .)";
+            tempPlayer.Text = "( .  _  .)";
             // 
             // labelHighScore
             // 
             labelHighScore.AutoSize = true;
-            labelHighScore.Font = new Font("Yu Gothic UI", 20F, FontStyle.Regular, GraphicsUnit.Point);
-            labelHighScore.Location = new Point(349, 22);
+            labelHighScore.Font = new Font("Yu Gothic UI", 13F, FontStyle.Regular, GraphicsUnit.Point);
+            labelHighScore.Location = new Point(313, 61);
             labelHighScore.Name = "labelHighScore";
-            labelHighScore.Size = new Size(92, 37);
+            labelHighScore.Size = new Size(163, 25);
             labelHighScore.TabIndex = 6;
-            labelHighScore.Text = "00000";
+            labelHighScore.Text = "High Score : 00000";
             // 
-            // labelCopyright
+            // tempItem
             // 
-            labelCopyright.AutoSize = true;
-            labelCopyright.Font = new Font("Yu Gothic UI", 13F, FontStyle.Regular, GraphicsUnit.Point);
-            labelCopyright.Location = new Point(172, 316);
-            labelCopyright.Name = "labelCopyright";
-            labelCopyright.Size = new Size(30, 25);
-            labelCopyright.TabIndex = 7;
-            labelCopyright.Text = "☆";
+            tempItem.AutoSize = true;
+            tempItem.Font = new Font("Yu Gothic UI", 13F, FontStyle.Regular, GraphicsUnit.Point);
+            tempItem.ForeColor = Color.Black;
+            tempItem.Location = new Point(140, 334);
+            tempItem.Name = "tempItem";
+            tempItem.Size = new Size(30, 25);
+            tempItem.TabIndex = 7;
+            tempItem.Text = "☆";
             // 
             // tempObstacle
             // 
@@ -138,22 +143,54 @@
             tempObstacle.TabIndex = 8;
             tempObstacle.Text = "★";
             // 
+            // labelCopyright
+            // 
+            labelCopyright.AutoSize = true;
+            labelCopyright.Location = new Point(349, 405);
+            labelCopyright.Name = "labelCopyright";
+            labelCopyright.Size = new Size(102, 15);
+            labelCopyright.TabIndex = 9;
+            labelCopyright.Text = "(c) 2023 sakamoto";
+            // 
+            // labelTimer
+            // 
+            labelTimer.AutoSize = true;
+            labelTimer.Font = new Font("Yu Gothic UI", 22F, FontStyle.Regular, GraphicsUnit.Point);
+            labelTimer.Location = new Point(722, 400);
+            labelTimer.Name = "labelTimer";
+            labelTimer.Size = new Size(66, 41);
+            labelTimer.TabIndex = 10;
+            labelTimer.Text = "000";
+            // 
+            // labelScore
+            // 
+            labelScore.AutoSize = true;
+            labelScore.Font = new Font("Yu Gothic UI", 20F, FontStyle.Regular, GraphicsUnit.Point);
+            labelScore.Location = new Point(349, 9);
+            labelScore.Name = "labelScore";
+            labelScore.Size = new Size(92, 37);
+            labelScore.TabIndex = 11;
+            labelScore.Text = "00000";
+            // 
             // Form1
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(800, 450);
-            Controls.Add(tempObstacle);
-            Controls.Add(labelCopyright);
-            Controls.Add(labelHighScore);
             Controls.Add(tempPlayer);
+            Controls.Add(labelScore);
+            Controls.Add(labelTimer);
+            Controls.Add(labelCopyright);
+            Controls.Add(tempObstacle);
+            Controls.Add(tempItem);
+            Controls.Add(labelHighScore);
             Controls.Add(labelclear);
             Controls.Add(labelGmeover);
             Controls.Add(buttonTitle);
             Controls.Add(buttonStart);
             Controls.Add(labelTitle);
             Name = "Form1";
-            Text = "Form1";
+            Text = "form1";
             Load += Form1_Load;
             ResumeLayout(false);
             PerformLayout();
@@ -169,7 +206,10 @@
         private Label labelclear;
         private Label tempPlayer;
         private Label labelHighScore;
-        private Label labelCopyright;
+        private Label tempItem;
         private Label tempObstacle;
+        private Label labelCopyright;
+        private Label labelTimer;
+        private Label labelScore;
     }
 }

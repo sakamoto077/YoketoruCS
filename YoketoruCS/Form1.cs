@@ -26,7 +26,7 @@ namespace YoketoruCS
         int[] vx = new int[LabelMax];
         int[] vy = new int[LabelMax];
 
-        static Random random = new Random();   
+        static Random random = new Random();
 
         //—ñ‹“Žqenum
         enum State
@@ -126,7 +126,7 @@ namespace YoketoruCS
                         vx[i] = random.Next(-SpeedMax, SpeedMax + 1);
                         vy[i] = random.Next(-SpeedMax, SpeedMax + 1);
                     }
-                    RandomObstacleAndItemPosition();                   
+                    RandomObstacleAndItemPosition();
                     break;
 
                 case State.Gameover:
@@ -235,8 +235,9 @@ namespace YoketoruCS
                         chrLabels[i].Visible = false;
                         if (itemCount <= 0)
                         {
-                            nextState = State.Clear;
+                            nextState = State.Clear;                          
                         }
+
                     }
                 }
             }
@@ -277,7 +278,7 @@ namespace YoketoruCS
         {
             return (index >= ObstacleIndex)
                 && (index < ItemIndex);
-        }          
+        }
 
         void AddScore(int point)
         {
@@ -289,7 +290,7 @@ namespace YoketoruCS
 
         void UpdateScore()
         {
-            labelScore.Text = $"{score:00000}";
+            labelscore.Text = $"{score:00000}";
         }
 
     }

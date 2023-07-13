@@ -41,7 +41,7 @@
             tempObstacle = new Label();
             labelCopyright = new Label();
             labelTimer = new Label();
-            labelScore = new Label();
+            labelscore = new Label();
             SuspendLayout();
             // 
             // timer1
@@ -162,15 +162,15 @@
             labelTimer.TabIndex = 10;
             labelTimer.Text = "000";
             // 
-            // labelScore
+            // labelscore
             // 
-            labelScore.AutoSize = true;
-            labelScore.Font = new Font("Yu Gothic UI", 20F, FontStyle.Regular, GraphicsUnit.Point);
-            labelScore.Location = new Point(349, 9);
-            labelScore.Name = "labelScore";
-            labelScore.Size = new Size(92, 37);
-            labelScore.TabIndex = 11;
-            labelScore.Text = "00000";
+            labelscore.AutoSize = true;
+            labelscore.Font = new Font("Yu Gothic UI", 20F, FontStyle.Regular, GraphicsUnit.Point);
+            labelscore.Location = new Point(349, 9);
+            labelscore.Name = "labelscore";
+            labelscore.Size = new Size(92, 37);
+            labelscore.TabIndex = 11;
+            labelscore.Text = "00000";
             // 
             // Form1
             // 
@@ -178,7 +178,7 @@
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(800, 450);
             Controls.Add(tempPlayer);
-            Controls.Add(labelScore);
+            Controls.Add(labelscore);
             Controls.Add(labelTimer);
             Controls.Add(labelCopyright);
             Controls.Add(tempObstacle);
@@ -210,6 +210,6 @@
         private Label tempObstacle;
         private Label labelCopyright;
         private Label labelTimer;
-        private Label labelScore;
+        private Label labelscore;
     }
 }

@@ -232,6 +232,7 @@ namespace YoketoruCS
                     {
                         //è·äQï®Ç…Ç‘Ç¬Ç©Ç¡ÇΩ
                         nextState = State.Gameover;
+                        UpdateHihgScore();
                     }
                     else
                     {
@@ -241,7 +242,8 @@ namespace YoketoruCS
                         chrLabels[i].Visible = false;
                         if (itemCount <= 0)
                         {
-                            nextState = State.Clear;                       
+                            nextState = State.Clear;
+                            UpdateHihgScore();
                         }
 
                     }
@@ -298,6 +300,13 @@ namespace YoketoruCS
         {
             labelscore.Text = $"{score:00000}";
         }
+
+        void UpdateHihgScore()
+        {
+            highScore = Math.Max(highScore, score);
+            labelHighScore.Text = $"High Score:{highScore:00000}";
+        }
+
 
     }
 }
